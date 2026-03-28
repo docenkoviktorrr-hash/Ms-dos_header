@@ -1,0 +1,8 @@
+Type in DOSBox:mount c c:\{path}
+Type in DOSBox st2: c:
+Type in DOSBox st3: {name program}
+
+[EXAMPLE]
+Type in DOSBox:mount c c:\DOS
+Type in DOSBox st2: c:
+Type in DOSBox st3: MyProgram.com  , or MyProgram

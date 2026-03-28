@@ -1,0 +1,22 @@
+[EXAMPLE]
+1. Make file
+Make file ".cpp" Includes ready-to-use code as an example (you can modify the file; this is just a starting point)
+
+2. Compile (.cpp -> .o):
+g++ -m32 -c main.cpp -o main.o -ffreestanding -nostdlib -fno-exceptions -fno-asynchronous-unwind-tables -fno-ident -Os
+
+3. Link (.o -> .exe):
+ld -m i386pe -T linker.ld main.o -o temp.exe --file-alignment 0x10 --section-alignment 0x10
+
+4. Strip to Raw Binary (.exe -> .com):
+objcopy -S -O binary temp.exe myprog.com
+
+5. Warning
+Make minimum file maximum 4kilobyte but 1kilobyte its very normal (If you're lucky, 300 or 500 bytes.)
+
+6. Start dosbox
+Find the folder "DosBox" and open "DOSBox.exe", if you don't know what to do, look in instruction.txt in the dosbox folder
+
+7. How compile it?
+Find the folder "bin" and find g++.exe , you say (ok, but how add to path?), press win + r and type sysdm.cpl and press enter and find "Advanced" and press...
+.. press Environment Variables and find System Variables, and click to "path" and alr press "Edit...", press alr "create" and type path to programm (example C:\g++.exe)
